@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Track(1) - Assignement 2 documentation. &mdash; Dikki&#39;s first documentation project 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=404a92a0"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Dikki's first documentation project
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Research Track(1) - Assignement 2 documentation.</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a><ul>
+<li><a class="reference internal" href="#assignement-2-2023-documentation">Assignement_2_2023 documentation!</a></li>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-scripts.GetDistanceSpeed">GetDistanceSpeed Node</a><ul>
+<li><a class="reference internal" href="#scripts.GetDistanceSpeed.LastTargetNode"><code class="docutils literal notranslate"><span class="pre">LastTargetNode</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.GetDistanceSpeed.LastTargetNode.botinfo_callback"><code class="docutils literal notranslate"><span class="pre">LastTargetNode.botinfo_callback()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.GetDistanceSpeed.LastTargetNode.goal_callback"><code class="docutils literal notranslate"><span class="pre">LastTargetNode.goal_callback()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.GetDistanceSpeed.LastTargetNode.robot_status"><code class="docutils literal notranslate"><span class="pre">LastTargetNode.robot_status()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-scripts.GetLastTarget">GetLastTarget Node</a><ul>
+<li><a class="reference internal" href="#scripts.GetLastTarget.GetLastTarget"><code class="docutils literal notranslate"><span class="pre">GetLastTarget</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.GetLastTarget.GetLastTarget.get_last_target_position"><code class="docutils literal notranslate"><span class="pre">GetLastTarget.get_last_target_position()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.GetLastTarget.GetLastTarget.target_callback"><code class="docutils literal notranslate"><span class="pre">GetLastTarget.target_callback()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-scripts.action_client">action_client Node</a><ul>
+<li><a class="reference internal" href="#scripts.action_client.ActionClientNode"><code class="docutils literal notranslate"><span class="pre">ActionClientNode</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.action_client.ActionClientNode.goal"><code class="docutils literal notranslate"><span class="pre">ActionClientNode.goal()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.action_client.ActionClientNode.odom_callback"><code class="docutils literal notranslate"><span class="pre">ActionClientNode.odom_callback()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Dikki's first documentation project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Research Track(1) - Assignement 2 documentation.</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="research-track-1-assignement-2-documentation">
+<h1>Research Track(1) - Assignement 2 documentation.<a class="headerlink" href="#research-track-1-assignement-2-documentation" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+<section id="assignement-2-2023-documentation">
+<h2>Assignement_2_2023 documentation!<a class="headerlink" href="#assignement-2-2023-documentation" title="Permalink to this heading"></a></h2>
+<p>This is the documentation of the assignment2_2023 package!</p>
+</section>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p>This is an overview of this documentation. Essentially, this project is a university assignment that relies entirely on the Gazebo simulation environment. The task entails prompting the user to set a target for the robot, following which it will navigate to the specified location. The professor has already developed the action server, and our task is to develop three nodes.</p>
+<p>The first node, named <strong>action_client</strong>, will implement an action client, allowing the user to set a target (x, y) or cancel it. From there, we need to update the status to determine whether the robot has reached its target position. Additionally, we need to update the robot’s position and velocity using a custom message.</p>
+<p>The second node, named <strong>GetLastTarget</strong>, when called, will return the coordinates of the last target sent by the user.</p>
+<p>The third node, <strong>GetDistanceSpeed</strong>, subscribes to the robot’s position and velocity (using the custom message) and implements a server to retrieve the distance of the robot from the target and the robot’s average speed.</p>
+</section>
+</section>
+<section id="module-scripts.GetDistanceSpeed">
+<span id="getdistancespeed-node"></span><h1>GetDistanceSpeed Node<a class="headerlink" href="#module-scripts.GetDistanceSpeed" title="Permalink to this heading"></a></h1>
+<dl class="simple">
+<dt>Subscribes to:</dt><dd><p>target_data
+robot_data</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.GetDistanceSpeed.LastTargetNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.GetDistanceSpeed.</span></span><span class="sig-name descname"><span class="pre">LastTargetNode</span></span><a class="reference internal" href="_modules/scripts/GetDistanceSpeed.html#LastTargetNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.GetDistanceSpeed.LastTargetNode" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="scripts.GetDistanceSpeed.LastTargetNode.botinfo_callback">
+<span class="sig-name descname"><span class="pre">botinfo_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Pos_Vel_msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/GetDistanceSpeed.html#LastTargetNode.botinfo_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.GetDistanceSpeed.LastTargetNode.botinfo_callback" title="Permalink to this definition"></a></dt>
+<dd><p>Callback function for processing robot position and velocity data</p>
+<p>This function is invoked whenever a message is received on the ‘robot_data’ topic, containing information about the robot’s position and velocity. The parameter ‘Pos_Vel_msg’ represents the message           received on that topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Pos_Vel_msg</strong> (<em>Pos_Vel</em>) – Message containing robot position and velocity data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.GetDistanceSpeed.LastTargetNode.goal_callback">
+<span class="sig-name descname"><span class="pre">goal_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/GetDistanceSpeed.html#LastTargetNode.goal_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.GetDistanceSpeed.LastTargetNode.goal_callback" title="Permalink to this definition"></a></dt>
+<dd><p>Callback function to handle the reception of goal position data.</p>
+<p>This function is called whenever a message containing goal position data is received on the ‘target_data’ topic. The parameter ‘target_msg’ represents the received message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target_msg</strong> (<em>Goal</em>) – A message containing goal position data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.GetDistanceSpeed.LastTargetNode.robot_status">
+<span class="sig-name descname"><span class="pre">robot_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/GetDistanceSpeed.html#LastTargetNode.robot_status"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.GetDistanceSpeed.LastTargetNode.robot_status" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate average speed and distance to the goal.</p>
+<p>This function calculates the average speed of the robot and the distance between its current position and the goal position.
+If the goal position and robot position are available, the function computes the Euclidean distance between them to determine the distance to the goal. In case either the goal position or robot               position is not available, it logs a warning message and sets the distance to zero as a fallback.</p>
+<p>To determine the average speed, the function examines the recent velocity data stored in the list (robot_speed). It calculates the average speed on the basis of that data ensuring that the                    calculation is based on recent and relevant data. If no velocity information is available, it logs a warning message and sets the average speed to zero.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A tuple containing the average speed and the distance to the goal.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-scripts.GetLastTarget">
+<span id="getlasttarget-node"></span><h1>GetLastTarget Node<a class="headerlink" href="#module-scripts.GetLastTarget" title="Permalink to this heading"></a></h1>
+<dl class="simple">
+<dt>Subscribes to:</dt><dd><p>info</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.GetLastTarget.GetLastTarget">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.GetLastTarget.</span></span><span class="sig-name descname"><span class="pre">GetLastTarget</span></span><a class="reference internal" href="_modules/scripts/GetLastTarget.html#GetLastTarget"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.GetLastTarget.GetLastTarget" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="scripts.GetLastTarget.GetLastTarget.get_last_target_position">
+<span class="sig-name descname"><span class="pre">get_last_target_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/GetLastTarget.html#GetLastTarget.get_last_target_position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.GetLastTarget.GetLastTarget.get_last_target_position" title="Permalink to this definition"></a></dt>
+<dd><p>Callback function to handle the request to get the value of last target.</p>
+<p>This function is called when a request is made to the ‘target_info’ service.
+It checks if the latest goal message is available, and if so, it constructs
+and returns a response containing the target position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>GetTrgtPos</em>) – The request made to the service</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A response containing the last target position</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>response (GetTrgtPosResponse)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.GetLastTarget.GetLastTarget.target_callback">
+<span class="sig-name descname"><span class="pre">target_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">goal_msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/GetLastTarget.html#GetLastTarget.target_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.GetLastTarget.GetLastTarget.target_callback" title="Permalink to this definition"></a></dt>
+<dd><p>Callback function to display the last target value.</p>
+<p>This function is activated when the goal has the value and it will display the last target position.</p>
+<dl class="simple">
+<dt>Paramters:</dt><dd><p>goal_msg (Goal) : value inserted by the user.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-scripts.action_client">
+<span id="action-client-node"></span><h1>action_client Node<a class="headerlink" href="#module-scripts.action_client" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.action_client.ActionClientNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.action_client.</span></span><span class="sig-name descname"><span class="pre">ActionClientNode</span></span><a class="reference internal" href="_modules/scripts/action_client.html#ActionClientNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.ActionClientNode" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="scripts.action_client.ActionClientNode.goal">
+<span class="sig-name descname"><span class="pre">goal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/action_client.html#ActionClientNode.goal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.ActionClientNode.goal" title="Permalink to this definition"></a></dt>
+<dd><p>Function to set and send a goal to the action server.</p>
+<p>This function prompts the user to enter the target x-coordinate and y-coordinate. It then sets
+the goal position using the entered coordinates and publishes a message containing the target
+position on the <cite>target_info</cite> topic. Additionally, it sends the goal to the action server using
+the <cite>PlanningGoal</cite> action type. If the user chooses to cancel the goal, it cancels the goal and
+prints a message. Finally, it waits for the result or cancellation from the action server and
+prints the goal status and result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.action_client.ActionClientNode.odom_callback">
+<span class="sig-name descname"><span class="pre">odom_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">odom_msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/action_client.html#ActionClientNode.odom_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.action_client.ActionClientNode.odom_callback" title="Permalink to this definition"></a></dt>
+<dd><p>Callback function to handle odometry messages.</p>
+<p>This function is called whenever an odometry message is received on the <cite>odom</cite> topic.
+It extracts the position and velocity information from the received message and publishes
+a custom message of type <cite>Pos_Vel</cite> containing the robot’s position and velocity on the
+‘robot_info’ topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>odom_msg</strong> (<em>Odometry</em>) – The received odometry message containing position and velocity information.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Dkshant Thakur.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

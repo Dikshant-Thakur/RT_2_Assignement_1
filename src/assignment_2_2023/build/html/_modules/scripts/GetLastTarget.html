@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>scripts.GetLastTarget &mdash; Dikki&#39;s first documentation project 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=404a92a0"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Dikki's first documentation project
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Overview</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Dikki's first documentation project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">scripts.GetLastTarget</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for scripts.GetLastTarget</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">.. module::GetLastTarget</span>
+<span class="sd">   </span>
+<span class="sd">   :platform:Unix</span>
+<span class="sd">   :synopsys: This file provides you with the last target position set by the user. </span>
+<span class="sd">   </span>
+<span class="sd">.. module author:: Dikshant Thakur dikshantthakur12@gmail.com</span>
+
+
+<span class="sd">Subscribes to:</span>
+<span class="sd">    info    </span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">rospy</span>
+<span class="kn">from</span> <span class="nn">assignment_2_2023.srv</span> <span class="kn">import</span> <span class="n">GetTrgtPos</span><span class="p">,</span> <span class="n">GetTrgtPosResponse</span>
+<span class="kn">from</span> <span class="nn">assignment_2_2023.msg</span> <span class="kn">import</span> <span class="n">Goal</span>
+
+<div class="viewcode-block" id="GetLastTarget"><a class="viewcode-back" href="../../index.html#scripts.GetLastTarget.GetLastTarget">[docs]</a><span class="k">class</span> <span class="nc">GetLastTarget</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the GetLastTarget instance.</span>
+
+<span class="sd">        This function initializes the ROS node named &#39;get_last_target&#39; and sets up</span>
+<span class="sd">        a service &#39;target_info&#39; to retrieve the last target position. It also subscribes</span>
+<span class="sd">        to the topic &#39;info&#39; to receive messages of type &#39;Goal&#39;, which contain information</span>
+<span class="sd">        about the latest goal position. </span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            None</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;get_last_target&#39;</span><span class="p">)</span>
+
+
+        <span class="n">rospy</span><span class="o">.</span><span class="n">spin</span><span class="p">()</span>
+
+<div class="viewcode-block" id="GetLastTarget.get_last_target_position"><a class="viewcode-back" href="../../index.html#scripts.GetLastTarget.GetLastTarget.get_last_target_position">[docs]</a>    <span class="k">def</span> <span class="nf">get_last_target_position</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+<span class="w">    </span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Callback function to handle the request to get the value of last target.</span>
+<span class="sd">        </span>
+<span class="sd">        This function is called when a request is made to the &#39;target_info&#39; service.</span>
+<span class="sd">        It checks if the latest goal message is available, and if so, it constructs</span>
+<span class="sd">        and returns a response containing the target position.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters:</span>
+<span class="sd">        	request (GetTrgtPos) : The request made to the service</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">    </span>
+<span class="sd">        	response (GetTrgtPosResponse) : A response containing the last target position</span>
+<span class="sd">            </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">latest_goal_msg</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">GetTrgtPosResponse</span><span class="p">()</span>  <span class="c1"># Assuming correct service name is GetTrgtPosResponse</span>
+            <span class="n">response</span><span class="o">.</span><span class="n">target_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">latest_goal_msg</span><span class="o">.</span><span class="n">target_x</span>
+            <span class="n">response</span><span class="o">.</span><span class="n">target_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">latest_goal_msg</span><span class="o">.</span><span class="n">target_y</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">rospy</span><span class="o">.</span><span class="n">logwarn</span><span class="p">(</span><span class="s2">&quot;No target information available&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="GetLastTarget.target_callback"><a class="viewcode-back" href="../../index.html#scripts.GetLastTarget.GetLastTarget.target_callback">[docs]</a>    <span class="k">def</span> <span class="nf">target_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">goal_msg</span><span class="p">):</span>
+<span class="w">    </span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Callback function to display the last target value. </span>
+<span class="sd">        </span>
+<span class="sd">        This function is activated when the goal has the value and it will display the last target position. </span>
+
+<span class="sd">        Paramters:</span>
+<span class="sd">            goal_msg (Goal) : value inserted by the user.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+<span class="sd">            </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># receive goal_msg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">latest_goal_msg</span> <span class="o">=</span> <span class="n">goal_msg</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;Received Goal message: target_x=</span><span class="si">{}</span><span class="s2">, target_y=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">goal_msg</span><span class="o">.</span><span class="n">target_x</span><span class="p">,</span> <span class="n">goal_msg</span><span class="o">.</span><span class="n">target_y</span><span class="p">))</span></div></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">get_last_target</span> <span class="o">=</span> <span class="n">GetLastTarget</span><span class="p">()</span>
+    <span class="k">except</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ROSInterruptException</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Dkshant Thakur.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

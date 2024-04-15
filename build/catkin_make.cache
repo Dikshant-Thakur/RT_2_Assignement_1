@@ -1,0 +1,2 @@
+assignment_2_2023
+-DCATKIN_DEVEL_PREFIX=/root/my_ros_workspace/devel -DCMAKE_INSTALL_PREFIX=/root/my_ros_workspace/install -G Unix Makefiles
